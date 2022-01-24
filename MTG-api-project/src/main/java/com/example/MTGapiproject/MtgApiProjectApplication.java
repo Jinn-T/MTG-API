@@ -1,5 +1,7 @@
 package com.example.MTGapiproject;
 
+import com.example.MTGapiproject.Entities.MagicCard;
+import com.example.MTGapiproject.Entities.TextBox;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +11,10 @@ public class MtgApiProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MtgApiProjectApplication.class, args);
 	}
+
+	TextBox myTextbox = new TextBox("hi", "hello")
+	MagicCard test1 = new MagicCard("jinn", "6W", "ger", "fiowejf", myTextbox, "jij", 345, 453, "gouweh");
+
+
 
 }
