@@ -12,7 +12,7 @@ public class MtgApiProjectApplication {
 		SpringApplication.run(MtgApiProjectApplication.class, args);
 	}
 
-	TextBox myTextbox = new TextBox("hi", "hello")
+	TextBox myTextbox = new TextBox("hi", "hello");
 	MagicCard test1 = new MagicCard("jinn", "6W", "ger", "fiowejf", myTextbox, "jij", 345, 453, "gouweh");
 
 

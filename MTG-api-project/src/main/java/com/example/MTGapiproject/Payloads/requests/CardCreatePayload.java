@@ -25,6 +25,7 @@ public class CardCreatePayload {
     public String getName () { // getter
         return this.name;
     }
+
     // methods with the keyword void does not return anything - its only setting it
     public void setName () { // setter
         this.name = name;
@@ -34,6 +35,7 @@ public class CardCreatePayload {
     public String getManaCost () {
         return this.manaCost;
     }
+
     public void setManaCost () {
         this.manaCost = manaCost;
     }
@@ -42,6 +44,7 @@ public class CardCreatePayload {
     public String getTypeLine () {
         return this.typeLine;
     }
+
     public void setTypeLine () {
         this.typeLine = typeLine;
     }
@@ -50,6 +53,7 @@ public class CardCreatePayload {
     public String getExpansionSymbol () {
         return this.expansionSymbol;
     }
+
     public void setExpansionSymbol () {
         this.expansionSymbol = expansionSymbol;
     }
@@ -58,6 +62,7 @@ public class CardCreatePayload {
     public TextBox getTextBox () {
         return this.textBox;
     }
+
     public void setTextBox () {
         this.textBox = textBox;
     }
@@ -66,7 +71,7 @@ public class CardCreatePayload {
     public String getArtistInfo () {
         return this.artistInfo;
     }
-    public String setArtistInfo () {
+    public void setArtistInfo () {
         this.artistInfo = artistInfo;
     }
 
@@ -74,6 +79,7 @@ public class CardCreatePayload {
     public Integer getCollectorNum () {
         return this.collectorNum;
     }
+
     public void setCollectorNum () {
         this.collectorNum = collectorNum;
     }
@@ -82,6 +88,7 @@ public class CardCreatePayload {
     public Integer getPowerTough () {
         return this.powerTough;
     }
+
     public void setPowerTough () {
         this.powerTough = powerTough;
     }
@@ -90,7 +97,8 @@ public class CardCreatePayload {
     public String getCardBorder () {
         return this.cardBorder;
     }
-    public String setCardBorder () {
+
+    public void setCardBorder () {
         this.cardBorder = cardBorder;
     }
 }
