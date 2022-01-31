@@ -1,8 +1,8 @@
 package com.example.MTGapiproject.Services;
 
-import com.example.MTGapiproject.Entities.TestEntity;
-import com.example.MTGapiproject.Payloads.requests.TestCreatePayload;
-import com.example.MTGapiproject.Repositories.TestRepository;
+import com.example.MTGapiproject.Entities.testEntity;
+import com.example.MTGapiproject.Payloads.requests.testCreatePayload;
+import com.example.MTGapiproject.Repositories.testRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,27 +13,25 @@ import java.util.Optional;
 
 @Service // indicates service later
 @Transactional // when something partially updates it deletes everything, no partial update
-public class TestService {
+public class testService {
 
     @Autowired // creates an instance that we can work with
-    private TestRepository repository;
+    private testRepository repository;
 
-    public List<TestEntity> all() {
-        return this.repository.findAll();
-    }
+    public List<testEntity> all() {return this.repository.findAll();}
 
-    public TestEntity findById(Long id) {
-        Optional<TestEntity> testEntity = this.repository.findById(id);
+    public testEntity findById(Long id) {
+        Optional<testEntity> testEntity = this.repository.findById(id);
         if(testEntity.isEmpty()) {
             throw new Error(String.format("testEntity with id:%d does not exist", id));
         }
         return testEntity.get();
     }
 
-    public TestEntity create(TestCreatePayload data) throws JsonProcessingException {
-        TestEntity newTestEntity = new TestEntity();
+    public void create(testCreatePayload test) {
+        testEntity newTestEntity = new testEntity(test.getName(), test.getPower());
 
-        return this.repository.save(newTestEntity);
+        repository.save(newTestEntity);
     }
 
 }

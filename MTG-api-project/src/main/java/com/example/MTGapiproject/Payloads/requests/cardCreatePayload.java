@@ -5,7 +5,7 @@ package com.example.MTGapiproject.Payloads.requests;
 
 import com.example.MTGapiproject.Entities.TextBox;
 
-public class CardCreatePayload {
+public class cardCreatePayload {
 
     // create getter and setters for private values
 

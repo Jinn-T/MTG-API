@@ -2,15 +2,16 @@ package com.example.MTGapiproject.Entities;
 
 public class TextBox {
 
-    String abilities;
-    String flavourText;
+    public String abilities;
+    public String flavourText;
 
-    // constructor
-    public TextBox (String abilities, String flavourText) {
+    public TextBox(String abilities, String flavourText) {
         this.abilities = abilities;
         this.flavourText = flavourText;
     }
 
-    // methods
+    public String getAbilities() {
+        return abilities;
+    }
 
 }
